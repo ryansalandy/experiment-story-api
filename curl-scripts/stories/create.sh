@@ -10,7 +10,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "story": {
       "hypothesis": "'"${HYPOTHESIS}"'",
-      "tactic": "'"${TACTIC}"'"
+      "tactic": "'"${TACTIC}"'",
       "votes": "'"${VOTES}"'"
     }
   }'

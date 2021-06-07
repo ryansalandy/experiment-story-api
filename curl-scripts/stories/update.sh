@@ -9,9 +9,7 @@ curl "${API}${URL_PATH}/${ID}" \
 --header "Authorization: Bearer ${TOKEN}" \
 --data '{
     "story": {
-      "hypothesis": "'"${HYPOTHESIS}"'"
       "tactic": "'"${TACTIC}"'"
-      "votes": "'"${VOTES}"'"
     }
   }'
 
