@@ -10,8 +10,10 @@ const storySchema = new mongoose.Schema({
     required: true
   },
   votes: {
-    type: String,
-    required: true
+    type: Number,
+    required: true,
+    min: 0,
+    max: 5
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
