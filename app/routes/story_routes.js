@@ -30,7 +30,7 @@ router.post('/stories', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// Read/ List Stories
+// Read/ All Stories
 router.get('/stories', requireToken, (reg, res, next) => {
   Story.find()
     .then(stories => {
@@ -38,6 +38,16 @@ router.get('/stories', requireToken, (reg, res, next) => {
     })
     .then(stories => res.status(200).json({
       stories: stories
+    }))
+    .catch(next)
+})
+
+// Read/ Single Story
+router.get('/stories/:id', requireToken, (req, res, next) => {
+  Story.findById(req.params.id)
+    .then(handle404)
+    .then(story => res.status(200).json({
+      story: story.toObject()
     }))
     .catch(next)
 })
@@ -64,16 +74,6 @@ router.delete('/stories/:id', requireToken, (req, res, next) => {
       story.deleteOne()
     })
     .then(() => res.sendStatus(204))
-    .catch(next)
-})
-
-// Show/ Single Story
-router.get('/stories/:id', requireToken, (req, res, next) => {
-  Story.findById(req.params.id)
-    .then(handle404)
-    .then(story => res.status(200).json({
-      story: story.toObject()
-    }))
     .catch(next)
 })
 
