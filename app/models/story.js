@@ -9,12 +9,6 @@ const storySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  votes: {
-    type: Number,
-    required: true,
-    min: 0,
-    max: 5
-  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

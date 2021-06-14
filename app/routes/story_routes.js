@@ -21,11 +21,11 @@ const router = express.Router()
 // Create/ Add Story
 router.post('/stories', requireToken, (req, res, next) => {
   req.body.story.owner = req.user.id
+
   Story.create(req.body.story)
+
     .then(story => {
-      res.status(201).json({
-        story: story.toObject()
-      })
+      res.status(201).json({ story: story.toObject() })
     })
     .catch(next)
 })
