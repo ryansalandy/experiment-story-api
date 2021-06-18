@@ -31,7 +31,7 @@ router.post('/stories', requireToken, (req, res, next) => {
 })
 
 // Read/ All Stories
-router.get('/stories', requireToken, (reg, res, next) => {
+router.get('/stories', requireToken, (req, res, next) => {
   Story.find()
     .then(stories => {
       return stories.map(story => story.toObject())
