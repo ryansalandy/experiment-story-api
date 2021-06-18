@@ -9,6 +9,6 @@ Experiment stories contain the following elements:
 
 ##Relationship Diagram
 
-[Deployed app].(https://ryansalandy.github.io/experiment-story-client/)
+[Deployed app](https://ryansalandy.github.io/experiment-story-client/)
 
-![Diagram].(https://ryansalandy.com/wp-content/uploads/2021/06/Group-4.png)
+![Diagram](https://ryansalandy.com/wp-content/uploads/2021/06/Group-4.png)
