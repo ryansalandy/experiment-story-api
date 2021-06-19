@@ -11,6 +11,7 @@ curl "${API}${URL_PATH}" \
     "story": {
       "hypothesis": "'"${HYPOTHESIS}"'",
       "tactic": "'"${TACTIC}"'"
+      "owner": "'"${OWNER}"'"
     }
   }'
 
